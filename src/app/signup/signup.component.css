@@ -1,0 +1,21 @@
+form {
+  padding: 50px;
+  /* width: 576px; */
+}
+img {
+  /* width: 1300px; */
+  width: 100%;
+}
+.signup-btn {
+  color: #f88634;
+  background-color: white;
+  border: 1px solid #f88634;
+  width: 100%;
+  border-radius: 40px;
+}
+.signup-btn:active {
+  background-color: #f88634;
+}
+input {
+  border-radius: 0;
+}

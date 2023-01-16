@@ -1,0 +1,81 @@
+<form [formGroup]="userForm" (ngSubmit)="updateUser()">
+  <h1>Update User</h1>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">First Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="name"
+      name="name"
+      formControlName="FirstName"
+    />
+    <span
+      style="color: red"
+      *ngIf="FirstName && FirstName.invalid && FirstName.touched"
+    >
+      This field is required
+    </span>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Last Name </label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      name="price"
+      formControlName="LastName"
+    />
+    <span
+      style="color: red"
+      *ngIf="LastName && LastName.invalid && LastName.touched"
+    >
+      This field is required
+    </span>
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email </label>
+    <input
+      type="email"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      name="price"
+      formControlName="Email"
+    />
+    <span style="color: red" *ngIf="Email && Email.invalid && Email.touched">
+      This field is required
+    </span>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Role </label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      name="role"
+      formControlName="Role"
+    />
+    <span style="color: red" *ngIf="Role && Role.invalid && Role.touched">
+      This field is required
+    </span>
+  </div>
+  <!-- <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Image</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInputPassword1"
+      name="imageUrl"
+      formControlName="imageUrl"
+    />
+    <span style="color: red" *ngIf="image && image.invalid && image.touched">
+      This field is required
+    </span>
+  </div> -->
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

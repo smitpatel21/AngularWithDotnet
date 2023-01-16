@@ -1,0 +1,192 @@
+<form [formGroup]="userForm" (ngSubmit)="SaveProfile()" class="pt-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <div class="profile-image-wrapper">
+          <div class="profile-image-text-wrapper">
+            <img
+              src="../../{{ this.profileImage?.substring(4) }}"
+              class="profile-image"
+              alt=""
+            />
+            <p class="name">{{ userName }}</p>
+            <a class="change-password" (click)="openResetPasswordMenu()"
+              >Change Password</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <p class="profile-info">Basic Information</p>
+        <hr />
+        <div class="row mb-3">
+          <div class="col">
+            <label for="exampleInputEmail1" class="form-label"
+              >First Name</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="name"
+              name="name"
+              formControlName="firstName"
+            />
+          </div>
+          <div class="col">
+            <label for="exampleInputEmail1" class="form-label">Last Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="name"
+              name="name"
+              formControlName="lastName"
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="name"
+              name="name"
+              formControlName="email"
+            />
+          </div>
+          <div class="col">
+            <label for="exampleInputEmail1" class="form-label">Role</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="name"
+              name="name"
+              formControlName="role"
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <label for="exampleInputEmail1" class="form-label"
+              >About My self</label
+            >
+            <textarea
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="name"
+              name="about"
+              formControlName="about"
+            ></textarea>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <label for="exampleInputEmail1" class="form-label"
+              >Upload profile image</label
+            >
+            <input
+              type="file"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="name"
+              name="name"
+              (change)="imageSelect($event)"
+            />
+          </div>
+        </div>
+
+        <p class="profile-info">Address Information</p>
+        <hr />
+        <div class="row mb-3">
+          <div class="col">
+            <label for="exampleInputEmail1" class="form-label">City</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="name"
+              name="name"
+              formControlName="city"
+            />
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="selectRole" class="form-label">Country</label>
+              <select
+                class="form-select"
+                id="selectRole"
+                formControlName="country"
+              >
+                <option>India</option>
+                <option>USA</option>
+                <option>Russia</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <p class="profile-info">Professional Information</p>
+          <hr />
+          <div class="col">
+            <div class="form-group">
+              <label for="selectRole" class="form-label">Availability</label>
+              <select
+                class="form-select"
+                id="selectRole"
+                formControlName="status"
+              >
+                <option>Available</option>
+                <option>Busy</option>
+                <option>Not Available</option>
+              </select>
+            </div>
+          </div>
+          <div class="col">
+            <label for="exampleInputEmail1" class="form-label"
+              >LinkedIn URL</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="name"
+              name="name"
+              formControlName="linkedin"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <p class="profile-info">My Skills</p>
+          <hr />
+          <ul
+            cdkListbox
+            cdkListboxMultiple
+            cdkListboxUseActiveDescendant
+            aria-labelledby="example-spatula-label"
+            class="example-listbox"
+          >
+            <li
+              *ngFor="let item of skills"
+              [cdkOption]="item.name"
+              class="example-option"
+            >
+              {{ item.name }}
+            </li>
+          </ul>
+          <span class="btn add-skil-btn" (click)="openSkillMenu()">
+            Add Skills
+          </span>
+        </div>
+        <div class="row">
+          <button type="submit" class="btn save-profile-btn">
+            Save details
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

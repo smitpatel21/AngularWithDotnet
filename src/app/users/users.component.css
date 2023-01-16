@@ -1,0 +1,31 @@
+
+a > img {
+  width: 20px;
+}
+tr {
+  height: 62px;
+}
+td {
+  padding: 20px 0px 0px 5px;
+}
+.table {
+  border: 1px solid gainsboro;
+}
+.table-wrapper {
+  padding: 50px 30px;
+  width: 100%;
+}
+.table-title {
+  height: 17px;
+  font-size: 22px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #414141;
+}
+th{
+    padding-bottom: 15px
+}

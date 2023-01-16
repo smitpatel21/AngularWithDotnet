@@ -1,0 +1,10 @@
+.main-wrapper {
+  display: flex;
+}
+.sidebar {
+  
+}
+.content {
+  /* min-width: 70vw;*/
+  width: 100%;
+}

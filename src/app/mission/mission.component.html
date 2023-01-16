@@ -1,0 +1,35 @@
+<div class="table-wrapper">
+  <p class="table-title">Mission</p>
+  <hr />
+  <div class="d-flex mb-3">
+    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Search"/>
+    <a routerLink="/add-mission" class="add-btn">+ Add</a>
+  </div>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Mission Title</th>
+        <th scope="col">Mission Type</th>
+        <th scope="col">Start Date</th>
+        <th scope="col">End Date</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of missions">
+        <td>{{ item.missionTitle }}</td>
+        <td>{{ item.missionName }}</td>
+        <td>{{ item.startDate }}</td>
+        <td>{{ item.deadline }}</td>
+        <td>
+          <a routerLink="/update-mission/{{ item.missionId }}"
+            ><img src="../../assets/edit.png" alt=""
+          /></a>
+          <a (click)="deleteMission(item.missionId)"
+            ><img src="../../assets/delete.png" alt=""
+          /></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg" *ngIf="isLogged">
+  <div class="container-fluid">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarColor01"
+      aria-controls="navbarColor01"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item" *ngIf="isLogged && userData.role === 'Admin'">
+          <a class="nav-link">{{ dateTime }} </a>
+        </li>
+        <!-- <li class="nav-item" *ngIf="userData.role === 'Admin'">
+          <a class="nav-link" routerLink="add-mission">add mission </a>
+        </li> -->
+        <!-- <li class="nav-item" *ngIf="userData.role === 'Customer'">
+          <a class="nav-link" routerLink="share-story">share story</a>
+        </li> -->
+        <li class="nav-item" *ngIf="isLogged && userData.role === 'Customer'">
+          <a class="nav-link" routerLink="stories">Stories</a>
+        </li>
+        <!-- <li class="nav-item" *ngIf="!isLogged">
+          <a class="nav-link" routerLink="/">Signup</a>
+        </li>
+        <li class="nav-item" *ngIf="!isLogged">
+          <a class="nav-link" routerLink="login">Login</a>
+        </li> -->
+        <!-- <li class="nav-item" *ngIf="isLogged">
+          <a class="nav-link" (click)="logout()">Logout</a>
+        </li> -->
+      </ul>
+      <div
+        class="header-profile-menu"
+        [matMenuTriggerFor]="menu"
+        *ngIf="isLogged"
+      >
+        <img
+          src="../../{{ userData?.profilePicUrl?.substring(4) }}"
+          class="me-2 profile-pic"
+          alt=""
+        />
+        <span class="nav-link">{{ userData?.firstName }}</span>
+        <!-- <button mat-button >Menu</button> -->
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="profile()">View Profile</button>
+          <button mat-menu-item (click)="logout()">Logout</button>
+        </mat-menu>
+      </div>
+    </div>
+  </div>
+</nav>

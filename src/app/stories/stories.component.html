@@ -1,0 +1,18 @@
+<app-filter-header></app-filter-header>
+<div class="hero-img">
+  <div class="title-text">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi aliquam
+    quisquam eveniet necessitatibus magnam expedita aliquid at illo cum fugit
+    tempora corporis libero dolorum itaque quas, inventore animi deleniti quidem
+    non porro veritatis optio reprehenderit provident! Suscipit doloribus
+    assumenda consequatur.
+  </div>
+  <a class="title-btn" routerLink="/share-story">Share your story &rarr;</a>
+</div>
+<div class="story-wrapper container">
+  <div class="row">
+    <div class="col-lg-4" *ngFor="let item of stories">
+      <app-story-card [cardData]="item"></app-story-card>
+    </div>
+  </div>
+</div>

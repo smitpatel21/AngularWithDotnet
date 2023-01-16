@@ -1,0 +1,22 @@
+<div class="card" (click)="redirect(cardData.id)">
+  <img
+    src="../../{{ cardData.coverPicUrl.substring(4) }}"
+    class="card-img-top"
+    alt="..."
+  />
+  <div class="card-body">
+    <h5 class="card-title">{{ cardData.title }}</h5>
+    <p class="card-text">{{ cardData.description.substring(0, 100) }}...</p>
+    <div class="author">
+      <div class="author-pic-wrapper me-3">
+        <img
+          src="../../{{profilePic.substring(4)}}"
+          class="author-pic"
+          alt=""
+          srcset=""
+        />
+      </div>
+      <span class="author-name">{{userName}}</span>
+    </div>
+  </div>
+</div>

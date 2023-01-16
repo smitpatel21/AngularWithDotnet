@@ -1,0 +1,35 @@
+a img {
+  width: 20px;
+}
+.card-btn {
+  display: block;
+  margin-right: 20px;
+  border-radius: 24px;
+  border: solid 2px #f88634;
+  background-color: #fff;
+  color: #f88634;
+  width: 48px;
+  height: 25px;
+  padding: 0px 11px 0px 5px;
+  border-radius: 12.5px;
+  border: solid 1px #f88634;
+}
+
+.table-wrapper{
+    padding: 50px 30px ;
+    width: 100%;
+}
+table{
+    border: 1px solid gainsboro;
+}
+.table-title {
+  height: 17px;
+  font-size: 22px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #414141;
+}

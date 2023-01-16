@@ -1,0 +1,40 @@
+.story-btn {
+  width: 109px;
+  height: 48px;
+  border-radius: 24px;
+  border: solid 2px #f88634;
+  background-color: #fff;
+  color: #f88634;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+.btn:active {
+  background-color: #edd7c8;
+}
+.story-cancel-btn {
+  width: 119px;
+  height: 48px;
+  color: #757575;
+  text-transform: capitalize;
+  border-radius: 24px;
+  border: solid 2px #757575;
+  background-color: #fff;
+  margin-right: 40px;
+}
+.title {
+  width: 296px;
+  height: 41px;
+  /* margin: 58px 194px 39px 240px; */
+
+  font-size: 40px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #414141;
+}
+select,textarea,input{
+  border-radius: 0;
+}

@@ -1,0 +1,49 @@
+<div cdkDropListGroup class="skill-wrapper">
+  <p class="title">Add your skills</p>
+  <div class="skill-container">
+    <span>Skills to add</span>
+    <div class="example-container">
+      <div
+        cdkDropList
+        [cdkDropListData]="skillsToAdd"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)"
+      >
+        <div class="example-box" *ngFor="let item of skillsToAdd" cdkDrag>
+          {{ item }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="skill-container">
+    <span>Your Skills</span>
+    <div class="example-container">
+      <div
+        cdkDropList
+        [cdkDropListData]="addedSkills"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)"
+      >
+        <div
+          class="example-box added-skills"
+          *ngFor="let item of addedSkills"
+          cdkDrag
+        >
+          {{ item }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <button class="btn btn-primary cancel-btn" (click)="cancelSkill()">
+      Cancel
+    </button>
+    <button
+      type="submit"
+      class="btn btn-primary save-btn"
+      (click)="saveSkills()"
+    >
+      Submit
+    </button>
+  </div>
+</div>

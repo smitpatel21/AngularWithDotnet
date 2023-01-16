@@ -1,0 +1,33 @@
+<div class="table-wrapper">
+  <p class="table-title">User</p>
+  <hr />
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Role</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of allUsers">
+        <td>{{ item.id }}</td>
+        <td>{{ item.firstName }}</td>
+        <td>{{ item.lastName }}</td>
+        <td>{{ item.email }}</td>
+        <td>{{ item.role }}</td>
+        <td>
+          <a routerLink="/update-user/{{ item.id }}"
+            ><img src="../../assets/edit.png" alt=""
+          /></a>
+          <a (click)="deleteUser(item.id)"
+            ><img src="../../assets/delete.png" alt=""
+          /></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

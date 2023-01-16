@@ -1,0 +1,144 @@
+<form [formGroup]="missionForm" (ngSubmit)="updateMission()">
+  <div class="container">
+    <p class="title">Update Mission</p>
+    <div class="row mb-3">
+      <div class="col-6">
+        <label for="exampleInputEmail1" class="form-label">Mission Title</label>
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="name"
+          name="name"
+          formControlName="missionTitle"
+        />
+        <span
+          style="color: red"
+          *ngIf="missionTitle && missionTitle.invalid && missionTitle.touched"
+        >
+          This field is required
+        </span>
+      </div>
+      <div class="col-6">
+        <label for="exampleInputEmail1" class="form-label">Mission Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          name="price"
+          formControlName="missionName"
+        />
+        <span
+          style="color: red"
+          *ngIf="missionName && missionName.invalid && missionName.touched"
+        >
+          This field is required
+        </span>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-6">
+        <label for="exampleInputEmail1" class="form-label">Total Seats</label>
+        <input
+          type="number"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          name="price"
+          formControlName="availableSeats"
+        />
+        <span
+          style="color: red"
+          *ngIf="
+            availableSeats && availableSeats.invalid && availableSeats.touched
+          "
+        >
+          This field is required
+        </span>
+      </div>
+      <div class="col-6">
+        <label for="exampleInputEmail1" class="form-label"
+          >Mission Start Date</label
+        >
+        <input
+          type="date"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          formControlName="startDate"
+        />
+        <span
+          style="color: red"
+          *ngIf="
+            missionStartDate &&
+            missionStartDate.invalid &&
+            missionStartDate.touched
+          "
+        >
+          This field is required
+        </span>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-6">
+        <label for="exampleInputEmail1" class="form-label"
+          >Mission Deadline</label
+        >
+        <input
+          type="date"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          formControlName="deadline"
+        />
+        <span
+          style="color: red"
+          *ngIf="
+            missionDeadline &&
+            missionDeadline.invalid &&
+            missionDeadline.touched
+          "
+        >
+          This field is required
+        </span>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Upload Image</label>
+      <input
+        type="file"
+        class="form-control"
+        id="exampleInputPassword1"
+        name="imageurl"
+        (change)="imageSelect($event)"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label"
+        >Mission description</label
+      >
+      <textarea
+        name="description"
+        class="form-control"
+        formControlName="missionDescription"
+        cols="30"
+        rows="2"
+      ></textarea>
+      <span
+        style="color: red"
+        *ngIf="
+          missionDescription &&
+          missionDescription.invalid &&
+          missionDescription.touched
+        "
+      >
+        This field is required
+      </span>
+    </div>
+    <button class="btn btn-primary mission-cancel-btn">Cancel</button>
+    <button type="submit" class="btn btn-primary add-mission-btn">
+      Submit
+    </button>
+  </div>
+</form>

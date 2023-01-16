@@ -1,0 +1,114 @@
+.profile-image-wrapper {
+  width: 330px;
+  height: 315px;
+  padding: 31px 75px 30px 74px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+}
+.profile-image-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile-image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.name {
+  text-transform: capitalize;
+  width: 148px;
+  height: 17px;
+  margin: 19px 16px 22px 17px;
+  font-size: 22px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #333;
+}
+.profile-info {
+  /* width: 180px; */
+  height: 17px;
+  margin: 49px 374px 25px 0px;
+  font-size: 22px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #414141;
+}
+
+.save-profile-btn {
+  height: 48px;
+  width: fit-content;
+  padding: 10px 24px 15px 25px;
+  border-radius: 24px;
+  border: solid 2px #f88634;
+  background-color: #fff;
+  color: #f88634;
+}
+
+.change-password {
+  height: 15px;
+  margin: 0 auto;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #414141;
+  cursor: pointer;
+}
+.add-skil-btn {
+  width: 119px;
+  height: 48px;
+  margin: 5px 10px 13px 1px;
+  border-radius: 24px;
+  border: solid 2px #757575;
+  background-color: #fff;
+}
+.example-listbox-container {
+  display: block;
+  width: 250px;
+  border: 1px solid black;
+}
+
+.example-listbox-label {
+  display: block;
+  padding: 5px;
+}
+
+.example-listbox {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.example-option {
+  position: relative;
+  padding: 5px 5px 5px 25px;
+}
+
+.example-option[aria-selected='true']::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path d="m9.55 18-5.7-5.7 1.425-1.425L9.55 15.15l9.175-9.175L20.15 7.4Z"/></svg>'); /* stylelint-disable-line */
+  background-size: cover;
+  position: absolute;
+  left: 2px;
+}
+
+.example-listbox:focus .cdk-option-active {
+  background: rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,39 @@
+<div class="card">
+  <img
+    src="../../{{cardData.missionPicUrl.substring(4)}}"
+    class="card-img-top"
+    alt="..."
+  />
+  <div class="pil"><span class="pil-text">Children</span></div>
+  <div class="card-body">
+    <h5 class="card-title">{{ cardData.missionTitle }}</h5>
+    <p class="card-text">
+      {{ cardData.missionDescription.substring(0,100) }}...
+    </p>
+    <p class="mission-name">{{ cardData.missionName }}</p>
+    <div class="date">
+      <span class="duration">From 10/01/2019 until 25/02/2019</span>
+    </div>
+    <div class="deadLine-seats">
+      <div class="seats">
+        <img
+          src="../../assets/user-icon-full.png"
+          class="me-2 pt-2 icon"
+          alt=""
+        />
+        <span>
+          <div class="seat">{{ cardData.availableSeats }}</div>
+          <div>Seats left</div>
+        </span>
+      </div>
+      <div class="deadline">
+        <img src="../../assets/watch-icon.png" class="me-2 pt-2 icon" alt="" />
+        <span>
+          <div>{{ cardData.deadline }}</div>
+          <p>Deadline</p>
+        </span>
+      </div>
+    </div>
+    <a href="#" class="btn btn-primary card-btn">Apply &rarr;</a>
+  </div>
+</div>

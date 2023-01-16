@@ -1,0 +1,14 @@
+<div class="nav-wrapper">
+  <mat-selection-list #shoes [multiple]="false">
+    <mat-list-option
+      *ngFor="let item of menuItems"
+      [value]="item"
+      [routerLinkActiveOptions]="{ exact: true }"
+      routerLinkActive="active"
+      routerLink="{{ item.url }}"
+    >
+      <img src="../../assets/{{ item.image }}.png" width="20px" alt="" />
+      <a class="nav-link-text">{{ item.title }}</a>
+    </mat-list-option>
+  </mat-selection-list>
+</div>

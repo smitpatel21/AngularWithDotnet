@@ -1,0 +1,75 @@
+<form [formGroup]="bookForm" (ngSubmit)="addBook()">
+  <div class="container">
+    <p class="title">Share Your Story</p>
+    <div class="row">
+      <div class="col-4">
+        <div class="form-group">
+          <label for="selectRole" class="form-label">Select mission</label>
+          <select class="form-select" id="selectRole" formControlName="mission">
+            <option>Environment</option>
+            <option>Crime</option>
+            <option>Hunger</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-4">
+        <label for="exampleInputEmail1" class="form-label">Story Title</label>
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="name"
+          name="name"
+          formControlName="title"
+        />
+        <span
+          style="color: red"
+          *ngIf="title && title.invalid && title.touched"
+        >
+          This field is required
+        </span>
+      </div>
+      <div class="col-4">
+        <label for="exampleInputEmail1" class="form-label">Story Date</label>
+        <input
+          type="date"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          name="price"
+          formControlName="date"
+        />
+        <span
+          style="color: red"
+          *ngIf="date && date.invalid && date.touched"
+        >
+          This field is required
+        </span>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Image</label>
+      <input
+        type="file"
+        class="form-control"
+        id="exampleInputPassword1"
+        name="imageurl"
+        (change)="imageSelect($event)"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label"
+        >Book description</label
+      >
+      <textarea
+        name="description"
+        class="form-control"
+        formControlName="description"
+        cols="30"
+        rows="2"
+      ></textarea>
+    </div>
+    <button class="btn btn-primary story-cancel-btn">Cancel</button>
+    <button type="submit" class="btn btn-primary story-btn">Submit</button>
+  </div>
+</form>

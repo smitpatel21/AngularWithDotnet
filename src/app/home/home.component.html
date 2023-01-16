@@ -1,0 +1,39 @@
+<app-filter-header></app-filter-header>
+<!-- <table class="table table-dark table-hover table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Image</th>
+      <th scope="col">Price</th>
+      <th scope="col">Description</th>
+      <th scope="col" *ngIf="userData.role === 'Customer'">Edit</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of books">
+      <td>{{ item.id }}</td>
+      <th>{{ item.title }}</th>
+      <td><img src="{{ item.imageUrl }}" width="100px" alt="" /></td>
+      <td>{{ item.price }}</td>
+      <td>{{ item.description }}</td>
+      <td *ngIf="userData.role === 'Customer'">
+        <a class="btn btn-info" routerLink="update-book/{{ item.id }}">Edit</a>
+      </td>
+      <td>
+        <button class="btn btn-danger" (click)="deleteBook(item.id)">
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table> -->
+
+<div class="home-wrapper container">
+  <div class="row">
+    <div class="col-lg-4 col-md-6" *ngFor="let item of missions">
+      <app-card [cardData]="item"></app-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="table-wrapper">
+  <p class="table-title">Stories</p>
+  <hr />
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Story Title</th>
+        <th scope="col">Full Name</th>
+        <th scope="col">Mission Name</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of stories; let i = index">
+        <td>{{ item.title }}</td>
+        <td>{{ userName[i] }}</td>
+        <td>{{ item.mission }}</td>
+        <td>
+          <div class="d-flex">
+            <a
+              routerLink="/story-detail/{{item.id}}"
+              class="btn btn-primary card-btn"
+              >View</a
+            >
+            <a (click)="deleteStory(item.id)"
+              ><img src="../../assets/delete.png" alt=""
+            /></a>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

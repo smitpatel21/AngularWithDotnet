@@ -1,0 +1,129 @@
+<!-- <div class="container"> -->
+  <div class="row">
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide col-lg-8 col-md-6"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="../../assets/Grow-Trees-On-the-path-to-environment-sustainability-login.png"
+            class="d-block"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="../../assets/Grow-Trees-On-the-path-to-environment-sustainability-login.png"
+            class="d-block"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="../../assets/Grow-Trees-On-the-path-to-environment-sustainability-login.png"
+            class="d-block"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="col-lg-4 col-md-6">
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <h1>User Login</h1>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >Email address</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            name="email"
+            formControlName="email"
+          />
+          <span
+            style="color: red"
+            *ngIf="email && email.invalid && email.touched"
+          >
+            This field is required
+          </span>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+            name="password"
+            formControlName="password"
+          />
+          <span
+            style="color: red"
+            *ngIf="password && password.invalid && password.touched"
+          >
+            This field is required
+          </span>
+        </div>
+        <button type="submit" class="btn btn-primary mb-3 me-3 login-btn">
+          Submit
+        </button>
+        <div class="text-center">Not Registered? <a routerLink="/signup">Register now</a></div>
+      </form>
+    </div>
+  </div>
+<!-- </div> -->

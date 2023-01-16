@@ -1,0 +1,13 @@
+.card{
+    margin-bottom: 50px;
+}
+.author{
+    display: flex;
+    align-items: center;
+}
+.author-pic{
+    width: 50px;
+    aspect-ratio: 1/1;
+    height: 100%;
+    border-radius: 50%;
+}
